@@ -173,14 +173,7 @@ jobs:
       with:
         key: build-kernel-${{ env.DEVICE }}${{ env.UPLOADNAME }}
         max-size: 2G
-
-    - name: 安装vim
-      run: |
-        sudo apt-get install vim
-        y
-        cd Xiaomi_Kernel_OpenSource/
-        vim ./scripts/dtc/dtc-lexer.l
- 
+        
     - name: Build kernel
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
